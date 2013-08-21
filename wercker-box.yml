@@ -1,4 +1,4 @@
-name: ubuntu12.04-ansbile
+name: ubuntu12.04-ansible
 version: 0.0.2
 description: Base box to use for running ansible playbooks
 type : main
