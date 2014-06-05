@@ -1,5 +1,5 @@
 name: ubuntu12.04-ansible
-version: 0.0.6
+version: 0.0.7
 inherits: wercker/ubuntu12.04-webessentials@1.0.1
 description: Base box to use for running ansible playbooks
 type : main
@@ -7,7 +7,7 @@ platform : ubuntu@12.04
 keywords :
   - ansible
 packages :
-  - ansible@1.4.5
+  - ansible@1.6.2
 script : |
   sudo apt-get update
   sudo apt-get install curl git build-essential python-jinja2 python-paramiko python-apt python-yaml -y
@@ -15,7 +15,7 @@ script : |
   sudo pip install -U boto
   git clone git://github.com/ansible/ansible.git
   cd ansible
-  git checkout v1.4.5
+  git checkout v1.6.2
   sudo make install
   type ansible || { echo "ansible not found"; exit 1; }
 
